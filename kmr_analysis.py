@@ -101,11 +101,6 @@ def get_graph(tagged):
 
     plt.figure(figsize=(15, 15))
     layout = nx.spring_layout(graph, k=.1)
-    if tagged == utagged:
-        plt.title('청와대의 답변 전 낙태 관련 트윗의 네트워크 지도')
-    else:
-        plt.title('청와대의 답변 후 낙태 관련 트윗의 네트워크 지도')
-
     nx.draw(graph, pos=layout, with_labels=True,
             font_size=10, font_family="AppleGothic",
             alpha=0.3, node_size=2000)
